@@ -1,0 +1,12 @@
+.idea
+nvenv
+
+#cache
+newrelia/management/commands/__pycache__
+newrelia/management/__pycache__
+newrelia/__pycache__
+newrelia/migrations/__pycache__
+newrelia/modules/__pycache__
+demo/migrations/__pycache__
+demo/__pycache__
+Newrelia/__pycache__
