@@ -1,5 +1,5 @@
 .idea
-nvenv
+venv
 
 #cache
 newrelia/management/commands/__pycache__

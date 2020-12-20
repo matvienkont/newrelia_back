@@ -12,13 +12,12 @@ async def send_image_response(socket_object):
     imagePath = path_to_watch + "cat.png"
     task = asyncio.Task(start(socket_object))
 
-
     with open(imagePath, "rb") as image:
         data = image.read()
         base64_encoded = base64.b64encode(data)
         base64_message = base64_encoded.decode('utf-8')
 
-    print(base64_message)
+    #print(base64_message)
 
     await socket_object.send({"type": "websocket.send",
                         "text": base64_message})
@@ -31,7 +30,7 @@ async def start(socket_object):
     while True:
         with open("../cfg.pickle", "rb") as handle:
             shared = pickle.load(handle)
-        print(shared["interrupted"])
+        #print(shared["interrupted"])
         await asyncio.sleep(4)
     observer.join()
 
