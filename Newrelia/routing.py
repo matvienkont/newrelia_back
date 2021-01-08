@@ -9,7 +9,7 @@ application = ProtocolTypeRouter({
         AuthMiddlewareStack(
             URLRouter(
                 [
-                    url("websocket", ImageConsumer()),
+                    url("websocket", ImageConsumer.as_asgi()),
                 ]
             )
         )
